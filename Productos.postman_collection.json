@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "9e07daf3-dfb4-49fe-a010-bd810fc084ef",
+    "name": "Productos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47209104",
+    "_collection_link": "https://go.postman.co/collection/47209104-9e07daf3-dfb4-49fe-a010-bd810fc084ef?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "ObtenerProductos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7105/api/Producto",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7105",
+          "path": [
+            "api",
+            "Producto"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ObtenerProducto",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7105/api/Producto/69e755a4-67b8-4266-b1a7-0e2ceca1a000",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7105",
+          "path": [
+            "api",
+            "Producto",
+            "69e755a4-67b8-4266-b1a7-0e2ceca1a000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AgregarProducto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Fanta Kolita\",\r\n  \"descripcion\": \"Deiciosa bebida\",\r\n  \"precio\": 800,\r\n  \"stock\": 25,\r\n  \"codigoBarras\": \"7501055300756\",\r\n  \"idSubCategoria\": \"8B64E9A7-1ACF-4AB1-A63A-1F785D8C72F3\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7105/api/Producto",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7105",
+          "path": [
+            "api",
+            "Producto"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EditarProducto",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Papas Barbacoa\",\r\n  \"descripcion\": \"Papas fritas sabor barbacoa\",\r\n  \"precio\": 900,\r\n  \"stock\": 85,\r\n  \"codigoBarras\": \"7501055300459\",\r\n  \"idSubCategoria\": \"40C359B3-5361-43FA-BED8-093BB71AA768\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7105/api/Producto/61092d8d-0d27-4c39-bb68-4816d40ccdfb",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7105",
+          "path": [
+            "api",
+            "Producto",
+            "61092d8d-0d27-4c39-bb68-4816d40ccdfb"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EliminarProducto",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7105/api/Producto/c3c67f85-8633-4f87-bb12-b31a40f87589",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7105",
+          "path": [
+            "api",
+            "Producto",
+            "c3c67f85-8633-4f87-bb12-b31a40f87589"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TipoCambioUSD",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCQ0NSLVNEREUiLCJzdWIiOiJwcml2ZXJhNjAwOTBAdWZpZGUuYWMuY3IiLCJhdWQiOiJTRERFLVNpdGlvRXh0ZXJubyIsImV4cCI6MjUzNDAyMzAwODAwLCJuYmYiOjE3NzA4NTk0MDAsImlhdCI6MTc3MDg1OTQwMCwianRpIjoiMTY1MjQzYTAtYTUzZC00ZjUyLWI1ZDctMWNmOWZhZmU5ZDVjIiwiZW1haWwiOiJwcml2ZXJhNjAwOTBAdWZpZGUuYWMuY3IifQ.7UtkZPp_72HOUYY-IspYSxOvrndwM1maAfOdwI9-ogY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "file",
+          "file": {}
+        },
+        "url": {
+          "raw": "https://apim.bccr.fi.cr/SDDE/api/Bccr.GE.SDDE.Publico.Indicadores.API/cuadro/491/series?fechaInicio=2026/02/18&fechaFin=2026/02/18&idioma=ES",
+          "protocol": "https",
+          "host": [
+            "apim",
+            "bccr",
+            "fi",
+            "cr"
+          ],
+          "path": [
+            "SDDE",
+            "api",
+            "Bccr.GE.SDDE.Publico.Indicadores.API",
+            "cuadro",
+            "491",
+            "series"
+          ],
+          "query": [
+            {
+              "key": "fechaInicio",
+              "value": "2026/02/18"
+            },
+            {
+              "key": "fechaFin",
+              "value": "2026/02/18"
+            },
+            {
+              "key": "idioma",
+              "value": "ES"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
