@@ -49,9 +49,9 @@ jobs:
 
       - name: Build with dotnet
         run: |       # ↓
-          dotnet build "Vehiculos.WEB/Abstracciones.csproj" --configuration Release --no-restore
-          dotnet build "Vehiculos.WEB/Reglas.csproj" --configuration Release --no-restore
-          dotnet build "Vehiculos.WEB/Web.csproj" --configuration Release --no-restore
+          dotnet build "Vehiculos.WEB/Abstracciones/Abstracciones.csproj" --configuration Release --no-restore
+          dotnet build "Vehiculos.WEB/Reglas/Reglas.csproj" --configuration Release --no-restore
+          dotnet build "Vehiculos.WEB/Web/Web.csproj" --configuration Release --no-restore
           
 
       - name: Run tests   # ↓
