@@ -8,13 +8,13 @@ using Microsoft.Extensions.Options;
 using System.Net;
 using System.Text.Json;
 
-namespace Web.Pages.Productos
+namespace Web.Pages.Vehiculos
 {
     public class AgregarModel : PageModel
     {
         private IConfiguracion _configuracion;
         [BindProperty]
-        public ProductoRequest producto { get; set; } = default!;
+        public VehiculoRequest vehiculo { get; set; } = default!;
         [BindProperty]
         public List<SelectListItem> marcas { get; set; } = default!;
         [BindProperty]
@@ -36,10 +36,10 @@ namespace Web.Pages.Productos
         {
             if (!ModelState.IsValid)
                 return Page();
-            string endpoint = _configuracion.ObtenerMetodo("ApiEndPoints", "AgregarProducto");
+            string endpoint = _configuracion.ObtenerMetodo("ApiEndPoints", "AgregarVehiculo");
             var cliente = new HttpClient();
 
-            var respuesta = await cliente.PostAsJsonAsync(endpoint, producto);
+            var respuesta = await cliente.PostAsJsonAsync(endpoint, vehiculo);
             respuesta.EnsureSuccessStatusCode();
             return RedirectToPage("./Index");
         }
