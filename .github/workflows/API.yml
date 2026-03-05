@@ -31,6 +31,7 @@ on:
     # Las borramos
     paths-ignore:
       - 'Productos.API/DB/**'
+      - 'Vehiculos.Web/**'
   workflow_dispatch:
 
 permissions:
